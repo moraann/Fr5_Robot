@@ -1,0 +1,2 @@
+frcobot_ros/fr10_moveit_config:frcobot_ros/fr10v6_moveit_config:frcobot_ros/fr3_moveit_config:frcobot_ros/fr3v5_moveit_config:frcobot_ros/fr3v6_moveit_config:frcobot_ros/fr5_moveit_config:frcobot_ros/fr5v6_moveit_config:frcobot_ros/frcobot_camera:frcobot_ros/frcobot_description:frcobot_ros/frcobot_gripper:frcobot_ros/frcobot_hw:frcobot_ros/ros_control_boilerplate
+-DCATKIN_DEVEL_PREFIX=/home/moran/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/moran/catkin_ws/install -G Unix Makefiles

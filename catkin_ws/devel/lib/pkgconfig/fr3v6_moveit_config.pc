@@ -1,0 +1,8 @@
+prefix=/home/moran/catkin_ws/devel
+
+Name: fr3v6_moveit_config
+Description: Description of fr3v6_moveit_config
+Version: 0.3.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
