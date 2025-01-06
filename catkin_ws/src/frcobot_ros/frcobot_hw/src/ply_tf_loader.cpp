@@ -37,27 +37,6 @@ int main(int argc, char** argv)
     // 设置点云原始坐标系为 "plyy"
     cloud_msg.header.frame_id = "plyy";
 
-    /*
-    // 发布从 "plyy" 到 "base_link" 的静态变换
-    geometry_msgs::TransformStamped transformStamped;
-    transformStamped.header.stamp = ros::Time::now();
-    transformStamped.header.frame_id = "plyy";  // 源坐标系是 "plyy"
-    transformStamped.child_frame_id = "world";  // 目标坐标系是 "world"
-
-    // 设置平移和旋转
-    transformStamped.transform.translation.x = 0.15556;  // +left and -right
-    transformStamped.transform.translation.y = 0.22223;  // +up and -down
-    transformStamped.transform.translation.z = -0.83223; // -forward and +backward
-
-    transformStamped.transform.rotation.x = 0.0;  //0.0;
-    transformStamped.transform.rotation.y = 0.0;  //0.0
-    transformStamped.transform.rotation.z = 0.0;	//-0.7071
-    transformStamped.transform.rotation.w = 1.0;  // 0.7071
-
-    // 发布变换
-    tf_broadcaster.sendTransform(transformStamped);
-	
-    */
     // 发布点云数据
     ros::Rate loop_rate(2);  // 2Hz 发布频率
     while (ros::ok())

@@ -20,10 +20,10 @@ int main(int argc, char** argv)
 
   ros::NodeHandle node_handle;
 
-  // 初始化 MoveGroupInterface，"fr5_arm" 是你机械臂的规划组名称
+  // 初始化 MoveGroupInterface，参数为机械臂的规划组名称
   moveit::planning_interface::MoveGroupInterface move_group("fr5_arm");
 
-  // 定义目标关节角度（假设是角度）
+  // 定义目标关节角度
   std::vector<double> joint_group_angles_degrees;
   joint_group_angles_degrees.push_back(0.0);  // joint_1 
   joint_group_angles_degrees.push_back(2.5);  // joint_2 
