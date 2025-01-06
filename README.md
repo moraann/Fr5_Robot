@@ -3,7 +3,9 @@ Fr5_ROS包使用流程  Update 2025/1/6 21:40
 该ROS包使用内部的Fr5机械臂模型开发，新增节点文件均位于catkin_ws/src/frcobot_ros/focobot_hw/src目录下.
 使用前请在catkin_ws目录下执行 catkin_make clear 重新编译该ROS包
 
-以下是ROS包使用方法，请顺序打开多个终端执行以下的命令行即可(为方便调试暂未整合成一个整体的launch文件)：
+以下是ROS包使用方法 (为方便调试暂未整合成一个整体的launch文件)：
+    请顺序打开多个终端执行以下的命令行：
+    
     // 启动rviz可视化界面、基础机械臂相关模型、moveit!规划器、机械臂状态同步等基础节点。启动之后可以看到rviz界面中下位机状态正确同步到rviz中
     1. roslaunch fr5_moveit_config demo_simulation.launch
 
