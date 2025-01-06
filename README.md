@@ -1,26 +1,26 @@
-ROS包使用流程  Update 2025/1/6 21:40
+Fr5_ROS包使用流程  Update 2025/1/6 21:40
 
 该ROS包使用内部的Fr5机械臂模型开发，新增节点文件均位于catkin_ws/src/frcobot_ros/focobot_hw/src目录下.
 使用前请在catkin_ws目录下执行 catkin_make clear 重新编译该ROS包
 
 以下是ROS包使用方法，请顺序打开多个终端执行以下的命令行即可(为方便调试暂未整合成一个整体的launch文件)：
-// 启动rviz可视化界面、基础机械臂相关模型、moveit!规划器、机械臂状态同步等基础节点。启动之后可以看到rviz界面中下位机状态正确同步到rviz中
-1. roslaunch fr5_moveit_config demo_simulation.launch
+    // 启动rviz可视化界面、基础机械臂相关模型、moveit!规划器、机械臂状态同步等基础节点。启动之后可以看到rviz界面中下位机状态正确同步到rviz中
+    1. roslaunch fr5_moveit_config demo_simulation.launch
 
-// 启动点云发布节点。启动之后会将指定的.ply点云文件发布到plyy frame下。（可手动添加pointcloud2对象进行可视化）
-2. rosrun frcobot_hw ply_tf_loader
+    // 启动点云发布节点。启动之后会将指定的.ply点云文件发布到plyy frame下。（可手动添加pointcloud2对象进行可视化）
+    2. rosrun frcobot_hw ply_tf_loader
 
-// 启动octomap体素栅格转换节点。启动后会将plyy frame下的点云进行指定分辨率的体素栅格化并发布到octomap_binary话题下
-3. rosrun frcobot_hw octomap_loader
+    // 启动octomap体素栅格转换节点。启动后会将plyy frame下的点云进行指定分辨率的体素栅格化并发布到octomap_binary话题下
+    3. rosrun frcobot_hw octomap_loader
 
-// 启动octomap到moveit碰撞场景发布节点。启动后rviz界面中将正确显示基于点云体素栅格化的碰撞体
-4. rosrun frcobot_hw otm_moveit
+    // 启动octomap到moveit碰撞场景发布节点。启动后rviz界面中将正确显示基于点云体素栅格化的碰撞体
+    4. rosrun frcobot_hw otm_moveit
 
-// 启动机械臂样条运动监听节点。 启动后终端将持续返回机械臂关节运动状态
-5. rosrun frcobot_hw yt_run
+    // 启动机械臂样条运动监听节点。 启动后终端将持续返回机械臂关节运动状态
+    5. rosrun frcobot_hw yt_run
 
-// 启动机械臂路径规划任务节点，完成该节点代码内指定的目标位置的样条运动的执行
-6. rosrun frcobot_hw plan
+    // 启动机械臂路径规划任务节点，完成该节点代码内指定的目标位置的样条运动的执行
+    6. rosrun frcobot_hw plan
 
 
 以下是ROS包各节点说明：（新增节点均位于frcobot_hw/src）
